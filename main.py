@@ -35,6 +35,9 @@ def get_command(input_str: str) -> Command:
         return CDCommand("".join(parameters))
     elif program == "cat":
         return CATCommand("".join(parameters))
+    elif program == "exit":
+        print("Goodbye!")
+        return None
     else:
         raise ValueError("This is not a valid command")
 
@@ -57,6 +60,8 @@ def main():
             except ValueError as e:
                 print(str(e))
                 continue
+            if command is None:
+                break
             cur_path = command.run(archive, cur_path)
 
 
