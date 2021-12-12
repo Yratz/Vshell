@@ -8,7 +8,7 @@ A simple bash emulator which takes a zip file as an working directory
 
 2. Run VShell:
 
-`python ../main.py <filename>`
+`python ../main.py <filename>  (for example file example/example.zip)`
 
 \<filename\> - name of the zip file
 
